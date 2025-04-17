@@ -16,12 +16,18 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccessTimeFilled
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Timer
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -59,8 +65,8 @@ fun courses (/*image:Painter,
                 .background(
                     brush = Brush.horizontalGradient(
                         colors = listOf(
-                            Color(0xFF3347B0), // início
-                            Color(0xFFCFD4EA)  // fim
+                            Color(0xFF3347B0),
+                            Color(0xFFCFD4EA)
                         )
                     ),
                 )
@@ -101,12 +107,25 @@ fun courses (/*image:Painter,
                     fontSize = 10.sp,
                     color = Color(0xFFFFFFFF),
                 )
-                Text(
-                    modifier = Modifier
-                        .padding(top = 10.dp),
-                    text = "3 Semanas",
-                    color = Color(0xFFFFFFFF),
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ){
+                    Icon(
+                        modifier = Modifier
+                            .size(20.dp),
+                        imageVector = Icons.Default.AccessTimeFilled,
+                        contentDescription = "",
+                        tint = (Color(color = 0xFFFFC23D))
+                    )
+                    Text(
+                        modifier = Modifier
+                            .padding(top = 10.dp),
+                        text = "3 Semanas",
+                        color = Color(0xFFFFFFFF),
+                    )
+                }
+
             }
         }
     }
