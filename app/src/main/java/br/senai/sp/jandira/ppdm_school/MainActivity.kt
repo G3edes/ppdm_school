@@ -16,6 +16,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.senai.sp.jandira.ppdm_school.screen.CourseScreen
 import br.senai.sp.jandira.ppdm_school.screen.HomeScreen
+import br.senai.sp.jandira.ppdm_school.screen.PerfilScreen
+import br.senai.sp.jandira.ppdm_school.screen.StudentsScreen
 import br.senai.sp.jandira.ppdm_school.ui.theme.Ppdm_schoolTheme
 
 class MainActivity : ComponentActivity() {
@@ -32,6 +34,8 @@ class MainActivity : ComponentActivity() {
                 {
                     composable(route="home"){ HomeScreen(navegacao)}
                     composable(route="dados"){ CourseScreen(navegacao) }
+                    composable(route="students") { StudentsScreen(navegacao)  }
+                    composable(route="perfil") { PerfilScreen(navegacao)  }
                 }
             }
 

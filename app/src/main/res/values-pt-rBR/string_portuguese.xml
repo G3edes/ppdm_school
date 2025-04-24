@@ -10,5 +10,35 @@
     <string name="instagram">instagram</string>
     <string name="facebook">facebook</string>
     <string name="searchlabel">Ache seu curso</string>
+    <string name="searchlabelstudent">Ache um aluno</string>
     <string name="courses">Cursos</string>
+    <string name="students">Lista de Alunos</string>
+    <string name="ds">DS</string>
+    <string name="rds">RDS</string>
+    <string name="ele">ELE</string>
+    <string name="dstitle">Desenvolvimento de sistemas</string>
+    <string name="rdstitle">Redes de Computadores</string>
+    <string name="eletitle">Eletroeletrônica</string>
+    <string name="dsdesc">Aprenda a desenvolver aplicativos web e mobile.</string>
+    <string name="rdsdesc">Aprenda a projetar redes de comunicação.</string>
+    <string name="eledesc">Aprenda a projetar redes de comunicação.</string>
+    <string name="week">3</string>
+    <string name="all">Todos</string>
+    <string name="studying">Cursando</string>
+    <string name="finished">Finalizado</string>
+
+
+    <string name="name">Luana Oliveira Dias</string>
+    <string name="id">20151001018</string>
+    <string name="data">2022</string>
+
+
+
+    <string name="name2">Pedro da Silva Borges</string>
+    <string name="id2">20151001018</string>
+
+    <string name="name3">Ana Clara Gomes</string>
+    <string name="id3">20151001018</string>
+    <string name="data2">2025</string>
+
 </resources>

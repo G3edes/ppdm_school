@@ -34,6 +34,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -44,21 +45,30 @@ import org.w3c.dom.Text
 
 @Composable
 
-fun courses (/*image:Painter,
-             sigla:String,
-             title:String,
-             desc:String,
-             week:Int*/){
+fun courses(
+    image: Painter,
+    sigla: String,
+    title: String,
+    desc: String,
+    week: String,
+    onClick: () -> Unit
+) {
+    val cardShape = RoundedCornerShape(16.dp)
+
     Card(
-        modifier= Modifier
-            .width(300.dp)
-            .height(170.dp)
+        modifier = Modifier
+            .padding(8.dp)
+            .width(380.dp)
+            .height(180.dp)
             .border(
                 width = 2.dp,
                 color = Color(0xFFFFC23D),
+                shape = cardShape
             ),
-        colors = CardDefaults.cardColors(containerColor = Color.Transparent),
-    ){
+        shape = cardShape,
+        elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.Transparent)
+    ) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -69,71 +79,64 @@ fun courses (/*image:Painter,
                             Color(0xFFCFD4EA)
                         )
                     ),
+                    shape = cardShape
                 )
-
-        ){
+        ) {
             Column(
-                modifier= Modifier
-                    .padding(10.dp)
+                modifier = Modifier.padding(10.dp)
             ) {
                 Row(
-                    modifier= Modifier
+                    modifier = Modifier
                         .fillMaxWidth()
                         .padding(12.dp),
                 ) {
                     Image(
-                        modifier= Modifier
-                            .size(70.dp),
-                        painter = painterResource(R.drawable.logo),
-                        contentDescription = "oi"
-
+                        modifier = Modifier.size(70.dp),
+                        painter = image,
+                        contentDescription = "logo"
                     )
                     Text(
-                        modifier= Modifier
-                            .padding(start = 50.dp),
-                        text = "DS",
+                        modifier = Modifier.padding(start = 50.dp),
+                        text = sigla,
                         fontWeight = FontWeight.Bold,
                         color = Color(0xFFFFC23D),
                         fontSize = 60.sp
                     )
                 }
                 Text(
-                    text = "DESENVOLVIMENTO DE SISTEMAS",
+                    text = title,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFFFFFFFF),
+                    color = Color.White
                 )
                 Text(
-                    text = "Aprenda como progamar",
-                    fontSize = 10.sp,
-                    color = Color(0xFFFFFFFF),
+                    text = desc,
+                    fontSize = 12.sp,
+                    color = Color.White
                 )
                 Row(
+                    modifier = Modifier.padding(top = 7.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
-                ){
+                ) {
                     Icon(
-                        modifier = Modifier
-                            .size(20.dp),
+                        modifier = Modifier.size(20.dp),
                         imageVector = Icons.Default.AccessTimeFilled,
-                        contentDescription = "",
-                        tint = (Color(color = 0xFFFFC23D))
+                        contentDescription = "Ícone de tempo",
+                        tint = Color(0xFFFFC23D)
                     )
                     Text(
-                        modifier = Modifier
-                            .padding(top = 10.dp),
-                        text = "3 Semanas",
-                        color = Color(0xFFFFFFFF),
+                        text = week,
+                        color = Color.White
                     )
                 }
-
             }
         }
     }
 }
 
-
+/*
 @Preview(showSystemUi = true)
 @Composable
 private fun coursesPreview() {
     courses()
-}
+}*/

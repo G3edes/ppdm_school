@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import br.senai.sp.jandira.ppdm_school.R
+import br.senai.sp.jandira.ppdm_school.components.courses
 
 @Composable
 
@@ -40,11 +41,10 @@ fun CourseScreen(navegacao:NavHostController?){
             .fillMaxSize()
     ){
         Column (
+            modifier = Modifier
+                .padding(20.dp)
         ){
             Column(
-                modifier = Modifier
-                    .padding(12.dp)
-
             ){
                 Row (
                     modifier = Modifier
@@ -72,7 +72,7 @@ fun CourseScreen(navegacao:NavHostController?){
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(20.dp),
+                    .padding(top=5.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 OutlinedTextField(
@@ -98,7 +98,7 @@ fun CourseScreen(navegacao:NavHostController?){
                 ){
                     Icon(
                         modifier = Modifier
-                            .size(70.dp),
+                            .size(50.dp),
                         imageVector = Icons.Filled.ListAlt,
                         contentDescription = "Lista",
                         tint = (Color(color = 0xFFFFC23D))
@@ -110,6 +110,30 @@ fun CourseScreen(navegacao:NavHostController?){
                         fontSize = 35.sp
                     )
                 }
+                courses(
+                    image=painterResource(R.drawable.ds),
+                    sigla=stringResource(R.string.ds),
+                    title=stringResource(R.string.dstitle),
+                    desc = stringResource(R.string.dsdesc),
+                    week="${stringResource(R.string.week)} Semesters",
+                    onClick = {navegacao!!.navigate("students")}
+                )
+                courses(
+                    image=painterResource(R.drawable.rds),
+                    sigla=stringResource(R.string.rds),
+                    title=stringResource(R.string.rdstitle),
+                    desc = stringResource(R.string.rdsdesc),
+                    week="${stringResource(R.string.week)} Semesters",
+                    onClick = {navegacao!!.navigate("students")}
+                )
+                courses(
+                    image=painterResource(R.drawable.ele),
+                    sigla=stringResource(R.string.ele),
+                    title=stringResource(R.string.eletitle),
+                    desc = stringResource(R.string.eledesc),
+                    week="${stringResource(R.string.week)} Semesters",
+                    onClick = {navegacao!!.navigate("students")}
+                )
             }
         }
 
