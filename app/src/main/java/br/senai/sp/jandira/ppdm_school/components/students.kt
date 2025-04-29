@@ -48,8 +48,6 @@ fun students(
     onClick:()->Unit
 ) {
     val cardShape = RoundedCornerShape(16.dp)
-
-    // Card com bordas arredondadas e sombra
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -57,7 +55,7 @@ fun students(
             .height(90.dp),
         shape = cardShape,
         elevation = CardDefaults.elevatedCardElevation(8.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White) // Cor do card
+        colors = CardDefaults.cardColors(containerColor = Color.White)
     ) {
         Box(
             modifier = Modifier
@@ -77,11 +75,9 @@ fun students(
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
             ) {
-                // Dados do estudante (imagem, nome e id)
                 Row(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Indicador de status
                     Card(
                         modifier = Modifier
                             .height(90.dp)
@@ -94,8 +90,6 @@ fun students(
                             bottomStart = 16.dp
                         )
                     ) {}
-
-                    // Imagem do estudante
                     Image(
                         modifier = Modifier
                             .padding(horizontal = 10.dp)
@@ -132,8 +126,6 @@ fun students(
                         }
                     }
                 }
-
-                // Data do estudante
                 Row(
                     modifier = Modifier
                         .padding(7.dp)

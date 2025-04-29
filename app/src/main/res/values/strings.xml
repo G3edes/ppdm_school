@@ -25,7 +25,18 @@
     <string name="all">All</string>
     <string name="studying">Studying</string>
     <string name="finished">Finished</string>
+    <string name="desempenho">Desempenho</string>
+    <string name="SIOP">SIOP</string>
+    <string name="INRI">INRI</string>
+    <string name="INNU">INNU</string>
+    <string name="HA">HA</string>
+    <string name="SERE">SERE</string>
+    <string name="CAES">CAES</string>
+    <string name="concluido">Concluído</string>
 
+
+
+    <string name="tds">001 - Técnico em Desenvolvimento de Sistemas</string>
 
     <string name="name">Luana Oliveira Dias</string>
     <string name="id">20151001018</string>

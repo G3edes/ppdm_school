@@ -190,6 +190,7 @@ fun StudentsScreen(navegacao: NavHostController?) {
                         id = stringResource(R.string.id),
                         onClick ={navegacao!!.navigate("perfil")}
                     )
+
                 }
             }
         }
